@@ -1,1 +1,1 @@
-git remote add origin https://github.com/kxmhxnxxl/TIL_js.git
+아무노래나 일단 틀어ㅓ

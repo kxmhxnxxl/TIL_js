@@ -1,0 +1,26 @@
+@mixin flex-row {
+    display:flex; flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:center;
+}
+@mixin slide_w_h_pc {
+    width:800px; height:350px;
+    border-style:solid;
+}
+$sky-color:#00ffff;
+$coral-color:#fa2372;
+#slide_container {
+    background-color:#ffadbb;
+    width:800px; overflow:hidden;
+    .slide_wrap {
+        color:white;
+        @include flex-row;
+        width:calc(800px * 2); /* or max-contents */
+        transform:translateX(-800px);
+        .slide {
+            @include slide_w_h_pc;
+        }
+        .slide1 {border-color:$sky-color; color:blue;}
+        .slide2 {border:1px solid;}
+    }
+}
