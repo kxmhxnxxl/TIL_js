@@ -1,3 +1,16 @@
+// 함수
+// 1. 함수 대기 (생성한 상태)
+function fun1(){
+    console.log('반복 실행 내용')
+}
+// 2. 함수 호출 (생성 밖)
+function coffeeRecipe(type,cup,shot){
+    console.log(`---------${type} 레시피---------`)
+    console.log(`${cup}컵 물을 채운다.`)
+    console.log(`${shot}샷 에스프레소를 넣는다.`)
+}
+coffeeRecipe('에스프레소',0,1);
+coffeeRecipe('아메리카노(HOT)',2,1);
 //키오스크 주문 출력(배열 활용법)
 function kiosk_array(hotice, name, num){
     const type = ['따뜻한', '차가운']

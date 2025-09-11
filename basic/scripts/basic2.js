@@ -190,3 +190,82 @@ x++;
 --y;
 console.log(x, y); // 7 5
 
+let a = 10
+let b = 20
+let c = 30
+let d = 40
+// a=10, b=20, c=30, d=40
+a++
+b--
+c++
+d--
+// a=11. b=19, c=31, d=39
+console.log(a, b, c, d)
+a = ++b
+b = a++
+// a=21, b=20, c=31, d=39
+console.log(a, b, c, d)
+c = a+b
+b = ++c
+// a=21, b=20, c=42, d=42
+console.log(a, b, c, d)
+a = ++c + 10
+b = --d + 1
+// a=53, b=42, c=43, d=41
+console.log(a, b, c, d)
+
+console.log('-----------------------')
+// 연산자 3. 복합대입연산자★
+let number = 10;
+// number = number + 5;
+number += 5;
+console.log(number); // 15
+number -= 5;
+console.log(number); // 10
+
+// var number = 1;
+// number +=1;
+// number++;
+
+// number += 2;
+// number++;
+// number++;
+
+console.log('---------------함수')
+// 함수
+// 1. 내장함수
+// prompt('함수는?')
+// alert('함수는');
+// print();
+// 2. 사용자 정의 함수
+// function 함수명(인자){반복구문}
+// Q1. html, css, js 반복출력
+/* 함수밖(전역스코프) */
+let lang1 = ''
+let lang2 = ''
+let lang3 = '' // 빈 문자열 초기화
+function study_lang(){/* 함수대기상태 */
+    lang1 = 'html'
+    lang2 = 'css'
+    lang3 = 'javascript'
+    console.log('배운 언어 : ${lang1+lang2+lang3')
+}
+study_lang(); /* 함수호출상태 */
+/* 함수는 생성(대기)과 호출을 별개로 취급한다. */
+console.log(lang1, lang2, lang3);
+lang2 = lang2 + '3' // lang2 += '3'
+console.log(lang2);
+
+console.log('지역변수와 전역변수')
+let xx = 1;
+let yy = 0;
+function fun1(){
+    yy = 5;
+    console.log(xx+yy)
+}
+function func2(){
+    let zz = 10;
+    console.log(xx+yy+zz)
+}
+func1()
+func2()
