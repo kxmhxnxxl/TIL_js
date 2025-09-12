@@ -1,0 +1,27 @@
+#tab_container {
+  background-color: #03c75a;
+}
+#tab_container .tab_title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#tab_container .tab_contents {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* @use './common.scss' as co;
+
+#tab_container {
+    background-color:co.$color-naver;
+} */
+@media screen and (max-width: 1000px) {
+  #tab_container {
+    background-color: #ddd;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

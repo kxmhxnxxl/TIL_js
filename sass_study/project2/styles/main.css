@@ -1,0 +1,27 @@
+.slide_wrap .slide_container {
+  background-color: #ffffd4;
+  max-width: 1360px;
+  min-width: 320px;
+  height: 750px;
+  margin: 50px auto 0;
+  padding: 60px;
+}
+.slide_wrap .slide_container .slide1 {
+  background-image: url(./images/mr.sik.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 800px auto;
+  background-position: 120% center;
+}
+.slide_wrap .slide_container .slide1 .title_contents h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.slide_wrap .slide_container .slide1 .title_contents p {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+/*# sourceMappingURL=main.css.map */

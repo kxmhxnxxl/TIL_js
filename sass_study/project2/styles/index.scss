@@ -1,0 +1,21 @@
+// 1360x750
+// #ffffd4
+@use './common.scss' as*;
+
+.slide_wrap {
+    .slide_container {
+        background-color:$bg-color;
+        @include pc_w_h;
+        .slide1 {
+            background-image:url(./images/mr.sik.png);
+            @include bg-cover;
+            background-size:800px auto;
+            background-position:120% center;
+            .title_contents {
+                h1 {font-size:3rem; font-weight:700;}
+                p {font-size:1.75rem; font-weight:600;
+                margin:20px 0 0;}
+            }
+        }
+    }
+}

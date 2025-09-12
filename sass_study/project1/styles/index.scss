@@ -1,0 +1,21 @@
+@use './common.scss' as *;
+
+#tab_container {
+    background-color:$color-naver;
+    .tab_title {
+        @include flex-row;
+        a {
+            &:hover {}
+        }
+    }.tab_contents {
+        @include flex-col;
+        .tab {}
+        .tab1 {}
+        .tab2 {}
+    }
+}
+/* @use './common.scss' as co;
+
+#tab_container {
+    background-color:co.$color-naver;
+} */ // 변수 파일이 두 개 이상일 경우 사용
