@@ -1,0 +1,35 @@
+@use './common.scss' as *;
+
+body {
+    background-color:#f9f9f9;
+    main {
+        width:420px; height:640px;
+        margin:50px auto; background-color:#fff;
+        box-shadow:5px 5px 20px rgba(0,0,0,0.05);
+        .top {
+            @include flex-row; justify-content:space-between; height:50px; padding:0 15px;
+            .profile {@include flex-row; gap:4px;
+                .photo {
+                    @include icon20; border-radius:50%;
+                    background-image:url(https://i.pinimg.com/736x/d6/ff/ac/d6ffacbabe0fbe000428ba0d5bfc1cc0.jpg);
+                }.name {font-size:$font-size-m;}
+            }.more {font-size:$font-size-m;}
+        }.photo {background-color:aqua;
+            @include bg; height:460px;
+            background-image:url(https://i.pinimg.com/736x/d6/ff/ac/d6ffacbabe0fbe000428ba0d5bfc1cc0.jpg);
+        }.contents {
+            .menu {@include flex-row; justify-content:space-between;
+                .left {
+                    a {
+                        img {@include icon20;}
+                    }
+                }.scrap {}
+            }.contents {
+                .likes {font-size:$font-size-1;}
+                .name {font-size:$font-size-m;}
+                .comments {color:$gray; font-size:$font-size-s;}
+                .day {font-size:$font-size-s;}
+            }
+        }
+    }
+}

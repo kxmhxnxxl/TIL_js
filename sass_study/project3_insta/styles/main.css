@@ -1,0 +1,72 @@
+body {
+  background-color: #f9f9f9;
+}
+body main {
+  width: 420px;
+  height: 640px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+}
+body main .top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 15px;
+}
+body main .top .profile {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+body main .top .profile .photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url(https://i.pinimg.com/736x/d6/ff/ac/d6ffacbabe0fbe000428ba0d5bfc1cc0.jpg);
+}
+body main .top .profile .name {
+  font-size: 0.9rem;
+}
+body main .top .more {
+  font-size: 0.9rem;
+}
+body main .photo {
+  background-color: aqua;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 460px;
+  background-image: url(https://i.pinimg.com/736x/d6/ff/ac/d6ffacbabe0fbe000428ba0d5bfc1cc0.jpg);
+}
+body main .contents .menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .contents .menu .left a img {
+  width: 20px;
+  height: 20px;
+}
+body main .contents .contents .likes {
+  font-size: 1.2rem;
+}
+body main .contents .contents .name {
+  font-size: 0.9rem;
+}
+body main .contents .contents .comments {
+  color: #aaa;
+  font-size: 0.875rem;
+}
+body main .contents .contents .day {
+  font-size: 0.875rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/index.js" defer></script>
+    <style>
+        main {position:relative;}
+        #popup {
+            position:absolute;
+            top:50%; left:50%;
+            transform:translate(-50%, -50%);
+            opacity:0;
+        }
+        #popup svg {
+            fill:rgba(255, 255, 255, 0.7);
+            stroke:#f5f5f5;
+            stroke-width:5px;
+            transform:scale(0.3); /* 비율 조정 */
+            overflow:visible; /* 잘린 부분이 보이게 */
+        }
+    </style>
+</head>
+<body>
+    <main> <!-- 선생님께서 한 거 -->
+        <!-- 팝업 -->
+        <div id="popup">
+            <svg width="152" height="148" viewBox="0 0 152 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M92.8333 147.435V130.181C105.458 126.534 115.628 119.52 123.344 109.14C131.059 98.759 134.917 86.9757 134.917 73.7896C134.917 60.6035 131.059 48.8201 123.344 38.4396C115.628 28.059 105.458 21.0451 92.8333 17.3979V0.143738C110.228 4.07152 124.396 12.8739 135.338 26.551C146.279 40.2281 151.75 55.9743 151.75 73.7896C151.75 91.6048 146.279 107.351 135.338 121.028C124.396 134.705 110.228 143.508 92.8333 147.435ZM0.25 99.25V48.75H33.9167L76 6.66665V141.333L33.9167 99.25H0.25ZM92.8333 107.667V39.9125C99.4264 42.9986 104.582 47.6278 108.299 53.8C112.016 59.9722 113.875 66.7055 113.875 74C113.875 81.1542 112.016 87.7823 108.299 93.8844C104.582 99.9864 99.4264 104.581 92.8333 107.667Z" />
+            </svg>
+        </div>
+        <!-- 고정 -->
+        <div class="top">
+            <a href="#" class="profile">
+                <span class="photo"><!-- bg --></span>
+                <span class="name">username</span>
+            </a>
+            <a href="#" class="more">더보기</a>
+        </div>
+        <div class="photo"><!-- bg --></div>
+        <div class="div contents">
+            <div class="menu">
+                <div class="left">
+                    <a href="#"><img src="./images/like_off.png" alt="좋아요"></a>
+                    <a href="#"><img src="./images/comment_off.png" alt="댓글"></a>
+                    <a href="#"><img src="./images/paper_off.png" alt="공유"></a>
+                </div>
+                <a href="#" class="scrap">스크랩</a>
+            </div>
+            <div class="contents">
+                <p class="likes">100 likes</p>
+                <p class="name">username</p>
+                <a href="#" class="comments">view all 20 comments</a>
+                <p class="day">3 Days Ago</p>
+            </div>
+        </div>
+    </main>
+    <!-- 내가 한 거 -->
+    <!-- <div id="header">
+        <div>
+            <a href="#"><img src="" alt=""></a>
+            <span>username</span>
+        </div>
+        <a href="#">더보기</a>
+    </div>
+    <img src="" alt="">
+    <div class="">
+        <div class="relationship">
+            <a href="#"><img src="" alt="좋아요"></a>
+            <a href="#"><img src="" alt="채팅"></a>
+            <a href="#"><img src="" alt="공유"></a>
+        </div>
+        <div class="save">
+            <a href="#">스크랩</a>
+        </div>
+    </div>
+    <div class="list">
+        <h1>100 likes</h1>
+        <h2>username</h2>
+        <a href="#">view all 20 comments</a>
+        <span>3 Days Ago</span>
+    </div> -->
+</body>
+</html>

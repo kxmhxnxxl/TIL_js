@@ -1,0 +1,2 @@
+const imgMenu = document.querySelector('.menu .left a')
+console.log(imgMenu)

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Document_files/reset.css">
+    <link rel="stylesheet" href="./Document_files/main.css">
+    <script src="./Document_files/index.js.다운로드" defer=""></script>
+<style>
+  .imageye-selected {
+    outline: 2px solid black !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  }
+</style></head>
+<body>
+    <main> <!-- 선생님께서 한 거 -->
+        <div class="top">
+            <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#" class="profile">
+                <span class="photo"><!-- bg --></span>
+                <span class="name">username</span>
+            </a>
+            <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#" class="more">더보기</a>
+        </div>
+        <div class="photo"><!-- bg --></div>
+        <div class="div contents">
+            <div class="menu">
+                <div class="left">
+                    <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#"><img src="./Document_files/like_off.png" alt="좋아요"></a>
+                    <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#"><img src="./Document_files/comment_off.png" alt="댓글"></a>
+                    <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#"><img src="./Document_files/paper_off.png" alt="공유"></a>
+                </div>
+                <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#" class="scrap">스크랩</a>
+            </div>
+            <div class="contents">
+                <p class="likes">100 likes</p>
+                <p class="name">username</p>
+                <a href="http://127.0.0.1:5500/sass_study/project3_insta/index.html#" class="comments">view all 20 comments</a>
+                <p class="day">3 Days Ago</p>
+            </div>
+        </div>
+    </main>
+    <!-- 내가 한 거 -->
+    <!-- <div id="header">
+        <div>
+            <a href="#"><img src="" alt=""></a>
+            <span>username</span>
+        </div>
+        <a href="#">더보기</a>
+    </div>
+    <img src="" alt="">
+    <div class="">
+        <div class="relationship">
+            <a href="#"><img src="" alt="좋아요"></a>
+            <a href="#"><img src="" alt="채팅"></a>
+            <a href="#"><img src="" alt="공유"></a>
+        </div>
+        <div class="save">
+            <a href="#">스크랩</a>
+        </div>
+    </div>
+    <div class="list">
+        <h1>100 likes</h1>
+        <h2>username</h2>
+        <a href="#">view all 20 comments</a>
+        <span>3 Days Ago</span>
+    </div> -->
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
