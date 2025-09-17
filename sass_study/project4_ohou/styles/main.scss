@@ -1,0 +1,4 @@
+@use './common.scss' as *;
+@use './index.scss';
+@use './responsive.scss';
+// sass --watch main.scss 경로: main.css 저장경로

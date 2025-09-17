@@ -1,0 +1,127 @@
+@use './common.scss' as*;
+#wrap {
+    header {
+        height:52px; padding:0 80px;
+        @include flex-row; gap:10px;
+        align-items:center;
+        border:1px solid $color-gray-light-lv2;
+        border-left:0; border-right:0;
+        a {font-size:$font-size-s;}
+    }main {@include content-w;
+        .path {padding:14px 0;
+            a {font-size:$font-size-s;}
+        }.container {@include flex-row; gap:24px;
+            .overview_img {@include flex-row; gap:15px;
+                .thumnail {@include flex-col; gap:10px;
+                    a {width:56px; height:56px; overflow:hidden;
+                        img {width:100%; height:100%;}
+                    }
+                }.overview {
+                    img {}
+                }
+            }.contents {
+                .brand {margin-bottom:25px;
+                    a {}
+                }.product_info {@include flex-row; align-items:center; gap:30px;
+                    h1 {font-size:$font-size-xl; margin-bottom:25px;}
+                    .right_icon {@include flex-row; gap:15px;
+                        svg {fill:$color-gray-light-lv1;}
+                        .scrap {@include flex-col; align-items:center;
+                            .scrap_icon {}
+                            span {font-size:$font-size-xxs;}
+                        }.share {
+                            .share_icon {}
+                        }
+                    }
+                }.review {@include flex-row; align-items:center; gap:10px; margin-bottom:25px;
+                    .score {svg {fill:$color-point;}
+                        .star {}
+                        .star1 {}
+                        .star2 {}
+                        .star3 {}
+                        .star4 {}
+                        .star5 {}
+                    }
+                }.price_wrap {@include flex-row;
+                    .sale_original_price {@include flex-row; gap:10px;
+                        .sale {}
+                        .original {color:$color-gray-light-lv1;}
+                    }.price_info {position:relative;
+                        svg {fill:$color-gray-light-lv2}
+                        .info_icon {}
+                        .info {color:$color-gray-light-lv1;}
+                    }
+                }.total_price {font-size:$font-size-xxl; margin-bottom:40px;
+                    .price {font-weight:$font-weight-bold}
+                    span {}
+                    img {width:auto; height:16px;}
+                }.benefit_ship {padding:20px 0 0;
+                    @include grid6-2;
+                    grid-template-columns:45px 1fr; gap:10px;
+                    grid-template-areas:
+                    'title1 cont1'
+                    'title2 cont2'
+                    '. cont3'
+                    '. cont4'
+                    '. cont5'
+                    '. cont6';
+                    dt {
+                        &:nth-of-type(1) {grid-area:title1;}
+                        &:nth-of-type(2) {grid-area:title2;}
+                    }
+                    dd {
+                        em {}
+                        .ship_info {
+                            &.ship_info {}
+                            &:nth-of-type(1) {grid-area:cont1;}
+                            &:nth-of-type(2) {grid-area:cont2;}
+                            &:nth-of-type(3) {grid-area:cont3;}
+                            &:nth-of-type(4) {grid-area:cont4;}
+                            &:nth-of-type(5) {grid-area:cont5;}
+                            &:nth-of-type(6) {grid-area:cont6;}
+                        }
+                    }
+                }#orderFrm {
+                    .product_opt {font-size:$font-size-s; @include flex-col; gap:25px;
+                        select {
+                            appearance:none;
+                            background-image:url(https://cdn-icons-png.flaticon.com/128/0/159.png);
+                            background-repeat:no-repeat; background-size:4%;
+                        }
+                        #color_select {
+                            border:1px solid $color-point; border-radius:5px;
+                            padding:10px 17px;
+                            option {}
+                        }#size_select {
+                            border:1px solid $color-gray-light-lv3; border-radius:5px;
+                            padding:10px 17px;
+                            option {}
+                        }
+                    }.product_price {
+                        .order_list {background-color:$color-gray-light-lv1;
+                            .close {}
+                            .num_price {
+                                .num {
+                                    #minus_btn {}
+                                    #order_num {}
+                                    #plus_btn {}
+                                }.price {}
+                            }
+                        }h2 {font-size:$font-size-s;}
+                        .price {font-size:$font-size-m;
+                            em {font-size:$font-size-l;}
+                        }
+                    }.order_btn {
+                        @include flex-row; gap:10px;
+                        font-size:$font-size-m;
+                        #cart_btn {@include btn; color:$color-point;}
+                        #buy_btn {
+                            @include btn;
+                            background-color:$color-point;
+                        }
+                    }
+                }
+            }
+        }
+    }footer {}
+}
