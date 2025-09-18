@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 테스트</title>
+</head>
+<body>
+    <button type="button" id="loginBtn">로그인</button>
+    <button type="button" id="logoutBtn">로그아웃</button>
+    <p class="result"></p>
+    <script>
+        localStorage.setItem('islogin','false')
+        const loginBtn = document.querySelector('#loginBtn')
+        const logoutBtn = document.querySelector('#logoutBtn')
+        const resultP = document.querySelector('.result')
+        console.log(loginBtn,resultP,logoutBtn)
+
+        // 2. 로그인 버튼 클릭 시 로그인 메세지 P 출력
+        loginBtn.addEventListener('click',()=>{
+            // 상태변경(로컬스토리지)
+            localStorage.setItem('isLogin', 'true')
+            resultStatus(); // 변경된 상태값에 따라 메세지 출력
+        })
+        // 3. 로그아웃 버튼 클릭 시 로그아웃 메세지 P 출력
+        logoutBtn.addEventListener('click',()=>{
+            // 상태변경(로컬스토리지)
+            localStorage.setItem('isLogin', 'false')
+            resultStatus(); // 변경된 상태값에 따라 메세지 출력
+        })
+
+        // 공통 메세지 P 함수
+        function resultStatus(){
+            let statusMsg = ''; // 메세지 초기값
+            // 상태 가져오기
+            let loginStatusValue = localStorage.getItem('isLogin')
+            console.log(loginStatusValue)
+            // 상태에 따라 조건문 분기 제작(로그인/로그아웃)
+            if(loginStatusValue == 'true'){
+                statusMsg = '로그인 완료'
+            }else {
+                statusMsg = '로그아웃 완료'
+            }
+            return resultP.textContent = statusMsg;
+        }
+    </script>
+</body>
+</html>

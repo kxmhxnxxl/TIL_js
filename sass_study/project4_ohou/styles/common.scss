@@ -1,5 +1,5 @@
 // common.scss
-$font-size-xxl:2rem;
+/* $font-size-xxl:2rem;
 $font-size-xl:1.375rem;
 $font-size-l:1.25rem;
 $font-size-m:1.063rem;
@@ -32,4 +32,50 @@ $color-gray-medium:#757575;
     padding:20px 0; width:50%;
     border:1px solid $color-point; border-radius:5px;
 }
-@mixin pst-ob {position:absolute;}
+@mixin pst-ob {position:absolute;} */
+
+/* 선생님 */
+// common.scss
+$font-size-xl:2rem;
+$font-size-l:1.375rem;
+$font-size-m:1.25rem;
+$font-size-s:0.875rem;
+$font-size-xs:0.813rem;
+$color-point:#0aa5ff;
+$color-black:#000;
+$color-white:#fff;
+$color-gray-light-lv1:#828c94;
+$color-gray-light-lv2:#bdbdbd;
+$color-gray-light-lv3:#dadce0;
+$color-gray-light-lv4:#f5f5f5;
+$color-gray-dark:#292929;
+$color-gray-medium:#757575;
+@mixin test-bg1 {background-color:aqua;}
+@mixin test-bg2 {background-color:lime;}
+@mixin test-bg3 {background-color:yellow;}
+@mixin test-bg4 {background-color:pink;}
+@mixin content-w {max-width:1156px; min-width:320px; margin:0 auto;}
+@mixin flex-row {
+    display:flex; flex-flow:row nowrap;
+    justify-content:flex-start; align-items:center;
+}
+@mixin flex-col {
+    display:flex; flex-flow:column nowrap;
+    justify-content:flex-start; align-items:flex-start;
+}
+@mixin grid-6-2 {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+}
+@mixin icon24 {width:24px; height:24px; display:inline-block;}
+@mixin icon20 {width:20px; height:20px; display:inline-block;}
+@mixin icon18 {width:18px; height:18px; display:inline-block;}
+@mixin icon14 {width:14px; height:14px; display:inline-block;}
+@mixin img100Percent {width:100%; height:auto;}
+@mixin thumnail {width:56px; height:56px;}
+@mixin thumnail_big {width:559px; height:559px;}
+@mixin cart_buy_btn {width:165px; line-height:57px; border-radius:5px; text-align:center;}
+@mixin after_before {content:''; display:block; position:absolute; left:0; top:0;}
+@mixin pst-ab {position:absolute; left:0; top:0;}
+@mixin bg {background-repeat:no-repeat; background-position:center; background-size:contain;}

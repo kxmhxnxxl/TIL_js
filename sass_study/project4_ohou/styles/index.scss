@@ -1,5 +1,7 @@
-@use './common.scss' as*;
-#wrap {
+
+
+/* 내가 한 거랑 선생님께서 한 거랑 비교 분석하기 */
+/* #wrap {
     header {
         height:52px; padding:0 80px;
         @include flex-row; gap:10px;
@@ -49,7 +51,11 @@
                     }.price_info {position:relative;
                         svg {fill:$color-gray-light-lv2}
                         .info_icon {}
-                        .info {color:$color-gray-light-lv1;}
+                        .info {
+                            width:300px;
+                            color:$color-gray-light-lv1;
+                            display:none;
+                        }
                     }
                 }.total_price {font-size:$font-size-xxl; margin-bottom:40px;
                     .price {font-weight:$font-weight-bold}
@@ -124,4 +130,152 @@
             }
         }
     }footer {}
+} */
+
+/* 선생님 */
+@use './common.scss' as*;
+#wrap {
+    header {
+        height:52px; padding:0 80px;
+        @include flex-row; gap:16px;
+        border:1px solid $color-gray-light-lv2;
+        border-left:0; border-right:0;
+        a {font-size:$font-size-m;}
+    }main {@include content-w;
+        .path { padding:14px 0;
+            a {font-size:$font-size-s; position:relative; padding-right:12px;
+                &::after {
+                    @include after_before; content:'>'; right:0; left:auto; top:3px;
+                    font-size:$font-size-xs; color:$color-gray-medium;
+                }
+                &:last-child::after {display:none;}
+            }
+        }.container {
+            @include flex-row; align-items:flex-start;
+            .overview_img {
+                @include flex-row; align-items:flex-start; gap:10px;
+                .thumnail { @include flex-col; gap:8px;
+                    a { @include thumnail; border-radius:5px; overflow:hidden;
+                        img {@include img100Percent;}
+                    }
+                }.overview {
+                    @include thumnail_big;
+                    img {@include img100Percent;}
+                }
+            }
+            > .contents {
+                margin-left:24px; max-width:460px; width: 460px;
+                svg {fill:$color-point;}
+                > * {margin-bottom:10px;}
+                .brand {
+                    a {font-size:$font-size-s;}
+                }
+                .product_info {@include flex-row; justify-content: space-between;
+                    h1 {font-size:$font-size-m;}
+                    .right_icon { @include flex-row; align-items:flex-start; gap:5px;
+                        .scrap {@include flex-col; align-items:center;
+                            .bookmark {fill:$color-white; stroke:$color-gray-light-lv1;}
+                            span {font-size:$font-size-xs;}
+                        }.share {
+                            .share_icon {fill:$color-white; stroke:$color-gray-light-lv1;}
+                        }
+                    }
+                }.review {@include flex-row; gap:14px; align-items:center;
+                    .score {@include flex-row; gap:2px;
+                        .star {width:14px;}
+                    }
+                    .number {color:$color-point; font-size:$font-size-s;}
+                }.price_wrap {
+                    .sale_original_price {
+                        .sale {}
+                        .original {color:$color-gray-light-lv1;}
+                        .price_info {
+                            position:relative;
+                            .info_icon {transform:translateY(4px); width:14px; fill:$color-white;}
+                            .info {
+                                width:300px; 
+                                @include pst-ab; left:50%; top:25px;
+                                transform:translateX(-50%); padding:10px;
+                                color:$color-gray-medium; font-size:$font-size-xs;
+                                background:$color-white; line-height:1.4;
+                                border-radius:5px; box-shadow:0 5px 7px rgba(0,0,0,0.15);
+                                display:none;/* 초기 숨기기 */
+                            }
+                        }
+                    }.total_price {
+                        .price {font-size:$font-size-xl; font-weight:700;}
+                        span {font-size:$font-size-m;}
+                        img {height:16px;}
+                    }
+                }.benefit_ship { padding:20px 0 0;
+                    @include grid-6-2; font-size:$font-size-s;
+                    grid-template-columns:45px 1fr; gap:10px;
+                    grid-template-areas:
+                        'title1 cont1'
+                        'title2 cont2'
+                        '. cont3'
+                        '. cont4'
+                        '. cont5'
+                        '. cont6';
+                    dt { color:$color-gray-dark;
+                        &:nth-of-type(1) {grid-area:title1;}
+                        &:nth-of-type(2) {grid-area:title2;}
+                    }
+                    dd {
+                        em {}
+                        &.ship_info {}
+                        &:nth-of-type(1) {grid-area:cont1;}
+                        &:nth-of-type(2) {grid-area:cont2;}
+                        &:nth-of-type(3) {grid-area:cont3;}
+                        &:nth-of-type(4) {grid-area:cont4;}
+                        &:nth-of-type(5) {grid-area:cont5; font-size:$font-size-xs; color:$color-gray-light-lv1;}
+                        &:nth-of-type(6) {grid-area:cont6;
+                            span {
+                                background:$color-gray-light-lv4; padding:10px;
+                                position: relative; top: 10px;
+                                em {font-weight:700;}
+                            }
+                        }
+                    }
+                }#orderFrm {padding:35px 0 30px;
+                    .product_opt {@include flex-col; align-items:flex-start; gap:6px; 
+                        select {
+                            appearance: none; width:100%; height:40px;
+                            border-radius:5px; border:1px solid $color-point; 
+                            padding-left:14px; font-size:$font-size-s;
+                            @include bg; background-position:95% center; background-size:14px;
+                            background-image:url(https://cdn-icons-png.flaticon.com/128/3298/3298615.png);
+                        }
+                        #color_select {}
+                        #size_select {border:1px solid $color-gray-light-lv3; }
+                    }.order_list {
+                        background:$color-gray-light-lv4; padding:16px;
+                        position:relative; margin:10px 0;
+                        .info {font-size:$font-size-s; margin:0 0 20px;
+                            .color {}
+                            .size {}
+                        }.close {@include pst-ab; left:auto; right:10px; top:10px;}
+                        .num_price {@include flex-row; justify-content: space-between;
+                            .num {
+                                background:$color-white; display:inline-block; padding:5px 10px;
+                                button {font-size:$font-size-m; font-weight:500;}
+                                #minus_btn {}
+                                #order_num {width:30px; text-align:center;}
+                                #plus_btn {}
+                            }.price {}
+                        }
+                    }.order_price { @include flex-row; justify-content: space-between;
+                        h2 {font-size:$font-size-s;}
+                        .price {font-size:$font-size-m;
+                            em {font-weight:600;}
+                        }
+                    }.order_btn {@include flex-row; gap:6px; margin:10px 0 0;
+                        button {flex:1; @include cart_buy_btn; background:$color-white; border:1px solid $color-point;}
+                        #cart_btn {border-color:$color-point;}
+                        #buy_btn {background-color: $color-point; color:$color-white;}
+                    }
+                }
+            }
+        }
+    }
 }
