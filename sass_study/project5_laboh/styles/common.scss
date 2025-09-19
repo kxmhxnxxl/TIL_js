@@ -1,0 +1,32 @@
+$font-size-30:1.875rem;
+$font-size-20:1.25rem;
+$font-size-17:1.063rem;
+$font-size-15:0.938rem;
+$font-size-14:0.875rem;
+$font-size-13:0.813rem;
+$font-size-12:0.75rem;
+
+$weight-B:700;
+$weight-M:500;
+
+$line-150:1.5;
+$letter-minus2:-0.02rem;
+
+$color-point:#008a48;
+$color-red:#e63d3d;
+$color-black:#000;
+$color-gray-dark:#666;
+$color-gray-light:#999;
+$color-white:#fff;
+
+@mixin main-w {max-width:1389px; min-width:320px; margin:0 auto;}
+@mixin thumbnail-w {width:80px; height:80px;}
+@mixin bigimg-w {width:640px; height:640px;}
+@mixin btn-w {width:192px; text-align:center; padding:16px 0;
+    border:1px solid $color-point;
+}
+@mixin preasent-btn {width:53px; height:53px; background-color:$color-red;
+    justify-content:center; align-items:center; display:flex;
+}
+@mixin flex-row {display:flex; flex-flow:row nowrap;}
+@mixin flex-col {display:flex; flex-flow:column nowrap;}

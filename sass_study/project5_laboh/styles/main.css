@@ -1,0 +1,82 @@
+main {
+  max-width: 1389px;
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .left_contents {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  background-color: aqua;
+}
+main .left_contents .thumbnail {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+main .left_contents a img {
+  width: 80px;
+  height: 80px;
+}
+main .left_contents .main_img img {
+  width: 640px;
+  height: 640px;
+}
+main .right_contents {
+  margin-left: 66px;
+}
+main .right_contents .review {
+  font-size: 0.75rem;
+}
+main .right_contents .review img {
+  width: 14px;
+  height: 14px;
+}
+main .right_contents .info h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02rem;
+}
+main .right_contents .info span {
+  font-size: 0.75rem;
+  color: #666;
+}
+main .right_contents .price_info .order_price {
+  color: #008a48;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+main .right_contents .price_info .order_price em {
+  font-weight: 700;
+  color: #008a48;
+}
+main .right_contents .order_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 18px;
+}
+main .right_contents .order_btn .cart_btn {
+  width: 192px;
+  text-align: center;
+  padding: 16px 0;
+  border: 1px solid #008a48;
+}
+main .right_contents .order_btn .buy_btn {
+  width: 192px;
+  text-align: center;
+  padding: 16px 0;
+  border: 1px solid #008a48;
+}
+main .right_contents .order_btn .preasent {
+  width: 53px;
+  height: 53px;
+  background-color: #e63d3d;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */

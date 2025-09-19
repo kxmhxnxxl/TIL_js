@@ -1,0 +1,52 @@
+@use './common.scss' as*;
+
+main {@include main-w; @include flex-row;
+    .left_contents {@include flex-row; gap:20px; background-color:aqua;
+        .thumbnail {@include flex-col; gap:10px;}
+            a {
+                img {@include thumbnail-w;
+            }
+        }.main_img {
+            img {@include bigimg-w}
+        }
+    }.right_contents {margin-left:66px;
+        .review {font-size:$font-size-12;
+            img {width:14px; height:14px;}
+            span {}
+            a {}
+        }.info {
+            h1 {
+            font-size:$font-size-30; font-weight:$weight-B;
+            line-height:$line-150; letter-spacing:$letter-minus2;
+            }
+            span {
+                font-size:$font-size-12; color:$color-gray-dark;
+            }
+        }.price_info {
+            .order_price {color:$color-point; font-size:$font-size-30; font-weight:$weight-M;
+                em {font-weight:$weight-B; color:$color-point;}
+            }del {}
+            p {}
+            span {}
+        }.order_num {
+            span {}
+            .minus_btn {}
+            #order_number {}
+            .plus_btn {}
+        }.total_price {
+            span {}
+            em {}
+            p {}
+        }.order_btn {@include flex-row; gap:18px;
+            .cart_btn {@include btn-w;
+                #cart_in {}
+            }.buy_btn {@include btn-w;
+                #click_buy {}
+            }.preasent {@include preasent-btn;
+                a {
+                    img {}
+                }
+            }
+        }
+    }
+}
