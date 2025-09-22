@@ -1,15 +1,17 @@
+@charset "UTF-8";
 main {
   max-width: 1389px;
   min-width: 320px;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
+  margin-top: 80px;
+  height: auto;
 }
 main .left_contents {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
-  background-color: aqua;
 }
 main .left_contents .thumbnail {
   display: flex;
@@ -24,8 +26,16 @@ main .left_contents .main_img img {
   width: 640px;
   height: 640px;
 }
+main .left_contents .main_img .pagenation a {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #666;
+}
+main .left_contents .main_img .pagenation { /* 버튼이 왜 안 만들어지지 내일 물어보기 */ }
 main .right_contents {
   margin-left: 66px;
+  width: 473px;
 }
 main .right_contents .review {
   font-size: 0.75rem;
@@ -33,6 +43,10 @@ main .right_contents .review {
 main .right_contents .review img {
   width: 14px;
   height: 14px;
+}
+main .right_contents .review a {
+  text-decoration-line: underline;
+  color: #999;
 }
 main .right_contents .info h1 {
   font-size: 1.875rem;
@@ -44,6 +58,9 @@ main .right_contents .info span {
   font-size: 0.75rem;
   color: #666;
 }
+main .right_contents .price_info {
+  margin-top: 20px;
+}
 main .right_contents .price_info .order_price {
   color: #008a48;
   font-size: 1.875rem;
@@ -52,25 +69,117 @@ main .right_contents .price_info .order_price {
 main .right_contents .price_info .order_price em {
   font-weight: 700;
   color: #008a48;
+  font-size: 1.875rem;
+}
+main .right_contents .price_info del {
+  margin-left: 8px;
+  color: #999;
+}
+main .right_contents .price_info p {
+  margin: 10px 0 10px 0;
+  color: #666;
+  font-size: 0.938rem;
+}
+main .right_contents .price_info p span {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0 10px 0 10px;
+}
+main .right_contents .price_info p em {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e63d3d;
+}
+main .right_contents .price_info span {
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: #999;
+}
+main .right_contents .order_num_btn {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .right_contents .order_num_btn .top_border {
+  width: 473px;
+  height: 1px;
+  background-color: #999;
+  margin: 30px 0 20px 0;
+}
+main .right_contents .order_num_btn .order_num {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .right_contents .order_num_btn .order_num .num_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid #999;
+  padding: 0 10px;
+}
+main .right_contents .order_num_btn .order_num .num_btn #order_number {
+  width: 52px;
+  height: 30px;
+  text-align: center;
+}
+main .right_contents .order_num_btn .order_num .num_btn #order_number .bottom_border {
+  width: 473px;
+  height: 1px;
+  background-color: #000;
+}
+main .right_contents .order_num_btn .bottom_border {
+  width: 473px;
+  height: 1px;
+  background-color: #999;
+  margin: 30px 0 20px 0;
+}
+main .right_contents .total_price {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .right_contents .total_price span {
+  font-size: 1.063rem;
+  font-weight: 700;
+  color: #666;
+}
+main .right_contents .total_price .total_price_ {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: end;
+  gap: 5px;
+}
+main .right_contents .total_price .total_price_ em {
+  font-weight: 700;
+  color: #008a48;
+  font-size: 1.875rem;
+}
+main .right_contents .total_price .total_price_ p {
+  color: #666;
+  font-size: 0.875rem;
 }
 main .right_contents .order_btn {
   display: flex;
   flex-flow: row nowrap;
   gap: 18px;
+  margin-top: 30px;
 }
-main .right_contents .order_btn .cart_btn {
+main .right_contents .order_btn .cart_btn #cart_in {
   width: 192px;
   text-align: center;
   padding: 16px 0;
   border: 1px solid #008a48;
 }
-main .right_contents .order_btn .buy_btn {
+main .right_contents .order_btn .buy_btn #click_buy {
+  color: #fff;
   width: 192px;
   text-align: center;
   padding: 16px 0;
   border: 1px solid #008a48;
+  background-color: #008a48;
 }
-main .right_contents .order_btn .preasent {
+main .right_contents .order_btn .preasent a {
   width: 53px;
   height: 53px;
   background-color: #e63d3d;
@@ -78,5 +187,6 @@ main .right_contents .order_btn .preasent {
   align-items: center;
   display: flex;
 }
+/* ★★★@mixin으로 통합할 수 있는 선택자는 모두 수정하기!!★★★(유지보수 및 가독성 향상) */
 
 /*# sourceMappingURL=main.css.map */
