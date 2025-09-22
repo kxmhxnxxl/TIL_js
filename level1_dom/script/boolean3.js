@@ -117,7 +117,7 @@ plusBtn.addEventListener('click',()=>{
     numFunc()
 })
 
-
+// 자주 쓰는 값이 있을 땐 꼭 따로 뺴놓기(유지보수)
 function numFunc(){
     numberInput.value = numVal; // 초기값 대입
     priceP.textContent = `${numVal*originalPrice}원` // 초기값(가격)

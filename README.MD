@@ -1,3 +1,6 @@
+## sass -> css 컴파일 방법
+* `cd 폴더 -> 폴더-> styles폴더` 여기까지 들어가서 `sass --watch main.scss:main.css`로 연결한다.
+
 ## 콜백함수 정리
 ### 매개변수없는 콜백함수 호출
 * `DOM.addEventListener('이벤트', 콜백함수)`
