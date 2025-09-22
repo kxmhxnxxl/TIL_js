@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="./script/boolean3.js" defer></script>
+    <style>
+        #map {
+            display:flex; justify-content:center; align-items:center;
+            width:800px; height:600px; margin:20px auto;
+            border-radius:20px; background:rgba(0, 0, 0, 0.05);
+        }
+        #control {text-align:center;}
+    </style>
+</head>
+<body>
+    <div id="map">
+        <img src="./images/animation_move.gif" alt="">
+    </div>
+    <div id="control">
+        <input type="text" name="txt" id="txt" placeholder="이동 방향을 입력하세요">
+        <button type="button" class="btn top">↑</button>
+        <button type="button" class="btn bottom">↓</button>
+        <button type="button" class="btn left">←</button>
+        <button type="button" class="btn right">→</button>
+    </div>
+    <section>
+        <button type="button" id="minus">-</button>
+        <button type="button" id="plus">+</button>
+        <input type="number" name="num" id="num">
+        <p class="price">900원</p>
+    </section>
+</body>
+</html>
