@@ -1,7 +1,7 @@
 @use './common.scss' as*;
 
 main {@include main-w; @include flex-row; margin-top:80px; height:auto;
-    .left_contents {@include flex-row; gap:20px;
+    .left_contents {gap:20px;
         .thumbnail {@include flex-col; gap:10px;}
             a {
                 img {@include thumbnail-w;
@@ -9,8 +9,8 @@ main {@include main-w; @include flex-row; margin-top:80px; height:auto;
         }.main_img {
             img {@include bigimg-w;}
             .pagenation {
-                a.active {}
-                a {@include page-btn;} /* 버튼이 왜 안 만들어지지 내일 물어보기 */
+                .page_btn {}
+                span {@include page-btn;} /* 버튼이 왜 안 만들어지지 내일 물어보기 */
             }
         }
     }.right_contents {margin-left:66px; width:473px;

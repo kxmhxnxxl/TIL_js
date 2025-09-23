@@ -32,4 +32,4 @@ $color-white:#fff;
 @mixin flex-col {display:flex; flex-flow:column nowrap;}
 @mixin price {font-weight:$weight-B; color:$color-point; font-size:$font-size-30;}
 @mixin border-line {width:473px; height:1px; background-color:$color-gray-light; margin:30px 0 20px 0;}
-@mixin page-btn {width:14px; height:14px; border-radius:7px; background-color:$color-gray-dark;}
+@mixin page-btn {width:14px; height:14px; border-radius:50%; background-color:$color-gray-dark; display:block;}
