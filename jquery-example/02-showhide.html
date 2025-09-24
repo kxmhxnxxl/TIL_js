@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 쇼핑몰 아코디언 예제</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style>
+    .section {
+      border: 1px solid #ccc;
+      margin-bottom: 10px; padding: 10px;
+    }
+    .section .title {
+      font-size: 1.2em; font-weight: 700;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .section .content {
+      padding: 5px; margin-top: 5px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- 섹션 1 -->
+  <div class="section">
+    <div class="title" data-target="content1">제목 1</div>
+    <div id="content1" class="content">내용 1: 쇼핑몰 소개 및 주요 서비스 안내</div>
+  </div>
+  
+  <!-- 섹션 2 -->
+  <div class="section">
+    <div class="title" data-target="content2">제목 2</div>
+    <div id="content2" class="content">내용 2: 최신 상품 및 이벤트 소식</div>
+  </div>
+  
+  <!-- 섹션 3 -->
+  <div class="section">
+    <div class="title" data-target="content3">제목 3</div>
+    <div id="content3" class="content">내용 3: 고객 지원 및 문의 안내</div>
+  </div>
+
+  <script>
+
+    const $contentAll = $('.content')
+    const $titleAll = $('.title')
+
+    $contentAll.hide();
+    $titleAll.click(function(){
+      $contentAll.stop().slideUp(400);
+      $(this).next().show();
+      // 제이쿼리 버전으로 transform 인식이 안 될 때
+      $(this).next().css('position','relative'); // left, right, top, bottom은 position, relative 필수
+      $(this).next().animate({
+        opacity:0.9,
+        height:'300px',
+        left:'50px',
+      },500)
+
+      // 제이쿼리와 변수를 강제로 연결하는 함수 get()
+      $(this).next().get(0).style.transform = 'rotate(10deg)'
+      /* $(this).next().stop().slideDown(1000); */ // stop은 애니메이션의 연속재생 방지를 위해 사용함
+      /* $contentAll.fadeOut(1500); */ // opacitiy + display
+      $(this).next().fadeIn(1000);
+      /* $(this).next().show(); */ // block
+      // $(this).next().css({display:'flex',}); // flex, grid, inline-block
+      // $(this).next().css('display','flex'); // flex, grid, inline-block
+    })
+
+    
+    /* const contentAll = document.querySelectorAll('content')
+    for(let i of content) i.style.display = 'none' */
+    /* content[0].addEventListenter('click',()=>{})
+    content[1].addEventListenter('click',()=>{})
+    content[2].addEventListenter('click',()=>{}) */
+    /* content[0].addEventListenter('click',()=>{
+      for(let i of content) i.style.display = 'none'
+      this.nextElementSibling.style.display = 'block'
+    }) */
+  </script>
+</body>
+</html>
