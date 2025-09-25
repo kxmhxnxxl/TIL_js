@@ -28,7 +28,37 @@
         <p class="select">선택옵션 : <span></span><button type="button" class="close">x</button></p>
     </div>
     <script>
-        
+        // 1. 선택옵션 초기 숨기기
+        // 2. select 옵션 선택 시
+        // 3. 선택옵션 목록 출력하기
+        // 4. 선택옵션 오른쪽 x 클릭 시 선택옵션 제거
+        const $selectOpt = $('select#color'); // select 태그
+        const $selectOrder = $('p.select'); // 선택옵션
+        const $orderClose = $('.select .close'); // x
+        console.log($selectOpt, $orderClose, $selectOrder);
+
+        $selectOrder.hide();
+
+        // js.ver
+        // selectOpt.addEventListener('change',()=>{a()})
+        // function a(){selectOpt.options[selectedIndex]}
+
+        // jq.ver
+        $selectOpt.change(function(){
+            console.log($(this).find('option:checked').val()) // checked 안 쓰면 초기값인 red만 뜸 // & 잘 확인하고 쓰기
+            // 선택옵션 보이기
+            $selectOrder.show();
+            // 선택옵션에 내가 선택한 옵션 값 출력하기
+            let thisVal = $(this).find('option:checked').val() // 최대한 변수 쓰면서(쓸일 있을 때) 깔끔하게 정리하는 습관들이기
+            $selectOrder.find('span').text(thisVal);
+            // js.ver
+            // selectOrder.children[0].textContent = thisVal;
+        })
+
+        // 4. 선택옵션 오른쪽 x 클릭 시 선택옵션 제거(가족관계 활용)
+        $orderClose.click(function(){
+            $(this).parent().hide();
+        })
     </script>
 </body>
 </html>
