@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 함수 | JS</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="./srcipts/timer1.js" defer></script>
+    <style>
+        h1 {width:200px; margin:50px auto; text-align:center;}
+        h1 img {width:100%;}
+        .gentle_wrap {position:relative; height:600px; display:flex;
+            margin:0 auto; width:1200px; background:#f9f9f9;
+        }
+        .gentle_wrap .page_number {
+            position:absolute; left:30px; top:30px; z-index:100;
+        }
+        .gentle_wrap .page_number .current {}
+        .gentle_wrap .page_number em {padding:0 5px;}
+        .gentle_wrap .page_number .total {font-weight:700;}
+        .gentle_wrap .gentle_slide_container1 {width:500px; position:relative;}
+        .gentle_wrap .gentle_slide_container1 .slide {
+            position:absolute; left:0; top:0; width:100%;
+            opacity:0; visibility:hidden; /* 모두 숨기기 */
+        }
+        .gentle_wrap .gentle_slide_container1 .slide1 {opacity:1; visibility:visible;} /* 첫 번째만 보이기 */
+        /* @keyframes -> animation 임시 클래스 -> js classList.add() */
+        /* opacity 0 -> 1 기본동작 준비 후 transition */
+        .gentle_wrap .gentle_slide_container1 .slide img {width:100%;}
+        .gentle_wrap .gentle_slide_container2 {float:right; width:500px; position:relative;}
+        .gentle_wrap .gentle_slide_container2 .slide {
+            position:absolute; left:0; top:0; width:100%;
+            display:none; /* 모두 숨기기 */
+        }
+        .gentle_wrap .gentle_slide_container2 .slide6 {display:block;} /* 첫 번째만 보이기 */
+        .gentle_wrap .gentle_slide_container2 .slide img {width:100%;}
+        /* 애니메이션 테스트 */
+        .ani_test {
+            opacity:0; visibility:hidden;
+            animation:opacity_ani 1s both 3s;}
+        .ani_test .box {
+            width:100px; height:100px; background:coral;
+        }
+        /* opacity와 display의 차이점(같이 쓸 수 없음) */
+        /* opacity : 있는 것을 보이지 않게 하는 것(보이지 않게 해둔 곳을 눌러도 작동한다) */
+        /* display : 있던 것을 지우는 것(아예 삭제되므로 작동하지 않는다) */
+        /* visibility: hidden or visible */
+        /* visibility는 opcity와 비슷한 속성으로 함께 사용할 수 있다 */
+        /* 3초 후에 opacity:1; 속성으로 ani_test 보이기 @keyframes */
+        /* @keyframes 애니메이션 이름 { 0%{} 100%{}} */
+        /* 선택자 {animation:키프레임 애니메이션 이름 지속시간} */
+        @keyframes opacity_ani {
+            0% {opacity:0; visibility:hidden;}
+            100% {opacity:1; visibility:visible;}
+        }
+    </style>
+</head>
+<body>
+    <h1>이미지 슬라이드</h1>
+    <h1><a href="#"><img src="./images/logo.png" alt="젠틀몬스터"></a></h1>
+    <!-- 전체틀 > (개별 슬라이드 묶음 + 버튼or슬라이드 등) > 개별 슬라이드 -->
+    <div class="gentle_wrap">
+        <div class="page_number">
+            <span class="current"></span>
+            <em>/</em>
+            <span class="total"></span>
+        </div>
+        <div class="gentle_slide_container1">
+            <div class="slide slide1"><img src="./images/gentile_01.jpg" alt=""></div>
+            <div class="slide slide2"><img src="./images/gentile_02.jpg" alt=""></div>
+            <div class="slide slide3"><img src="./images/gentile_03.jpg" alt=""></div>
+            <div class="slide slide4"><img src="./images/gentile_04.jpg" alt=""></div>
+            <div class="slide slide5"><img src="./images/gentile_05.jpg" alt=""></div>
+            <div class="slide slide6"><img src="./images/gentile_06.jpg" alt=""></div>
+        </div>
+        <div class="gentle_slide_container2">
+            <div class="slide slide1"><img src="./images/gentile_01.jpg" alt=""></div>
+            <div class="slide slide2"><img src="./images/gentile_02.jpg" alt=""></div>
+            <div class="slide slide3"><img src="./images/gentile_03.jpg" alt=""></div>
+            <div class="slide slide4"><img src="./images/gentile_04.jpg" alt=""></div>
+            <div class="slide slide5"><img src="./images/gentile_05.jpg" alt=""></div>
+            <div class="slide slide6"><img src="./images/gentile_06.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="ani_test">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
